@@ -4,7 +4,7 @@ class Admin::UsersController < ApplicationController
 
   def index
     @users = User.newest.paginate page: params[:page],
-      per_page: Settings.user_per_page
+      per_page: Settings.pagination.per_page
   end
 
   def show

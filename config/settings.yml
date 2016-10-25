@@ -35,3 +35,7 @@ questions:
     single_choice: "single_choice"
     multi_choice: "multi_choice"
     text: "text"
+search_form:
+  user_name: "Username"
+  all_subject: "All subject"
+  search_submit: "Search"

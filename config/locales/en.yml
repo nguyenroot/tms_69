@@ -264,6 +264,8 @@ en:
       form:
         cancel_button: "Cancel"
     users:
+      form:
+          title": Edit User
       index_num: "Index"
       name: "Name"
       email: "Email"
