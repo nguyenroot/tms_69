@@ -2,21 +2,20 @@
   <div class="container">
     <h3>
       <span>
-        <%= @subject.name %>
+        <h4><%= t ".subject_levels" %></h4>
       </span>
     </h3>
   </div>
 </div>
 <div class="containe">
-  <div class="col-md-9 contact-left cont">
-  <h4><%= t ".subject_levels" %></h4>
+  <div class="col-md-12 contact-left cont">
   <table class="table table-bordered">
     <thead class="thead-inverse">
       <tr>
-        <th><%= t ".subject_name" %></th>
-        <th><%= t ".name" %></th>
-        <th><%= t ".question_number" %></th>
-        <th><%= t ".actions" %></th>
+        <th class="text-center"><%= t ".subject_name" %></th>
+        <th class="text-center"><%= t ".name" %></th>
+        <th class="text-center"><%= t ".question_number" %></th>
+        <th class="text-center" colspan="2"><%= t ".actions" %></th>
       </tr>
     </thead>
     <tbody class="subject-index">
@@ -25,15 +24,18 @@
         <td><%= @subject.name %></td>
         <td><%= link_to level.name, [:admin, level] %></td>
         <td><%= level.question_number %></td>
-        <td>
+        <td class="text-center">
           <div class="btn-group" role="group">
-            <%= link_to t(".edit"), edit_admin_level_path(level.id),
-              class: "glyphicon glyphicon-pencil" %>
+          <%= link_to image_tag("edit.png",
+            class:"img-responsi"), edit_admin_level_path(level.id) %>
           </div>
+        </td>
+        <td class="text-center">
           <div class="btn-group" role="group">
-            <%= link_to t(".delete"), admin_level_path(level.id),
-              method: :delete, data: {confirm: t(".delete_levels_confirm")},
-              class: "glyphicon glyphicon-remove" %>
+          <%= link_to image_tag("delete.png",
+            class:"img-responsi"), admin_level_path(level.id),
+              method: :delete,
+              data: {confirm: t(".delete_subject_confirm")}%>
           </div>
         </td>
       </tr>
@@ -45,3 +47,6 @@
   <div class="col-md-9 contact-left">
   </div>
 </div>
+
+
+

@@ -6655,3 +6655,32 @@ p {
   background-color: #eee;
   height: 50px;
 }
+@media (min-width: 768px) {
+  .body {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .body {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .body {
+    width: 1170px;
+  }
+}
+.body-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.body {
+  padding-right: 15px;
+  padding-left: 15px;
+  height :600px;
+  margin-top :50px;
+  margin-right: auto;
+  margin-left: auto;
+}
